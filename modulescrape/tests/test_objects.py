@@ -2,8 +2,17 @@ __author__ = 'reiscracker'
 # coding: utf-8
 
 from unittest import TestCase
-from output import style as Style
 from modulescrape import objects
+
+def comparable_test_result(expected, actual, printMetacharacters=False):
+    """
+    Prints either a single variable or an object subclassing Iterable with meta characters (\n, \t, \r etc)
+    """
+    def formatFunction(ex, ac):
+        lineFormat = 'Expect: {}\nActual: {}'.format
+        return lineFormat(repr(ex), repr(ac)) if printMetacharacters else lineFormat(ex, ac)
+
+    return "\n" + "\n".join([ formatFunction(ex, ac) for ex, ac in zip(expected, actual) ])
 
 class TestObjects(TestCase):
 
@@ -35,7 +44,7 @@ class TestObjects(TestCase):
             0, 2, 4, 10, 13
         ]
         actual = self.module._find_empty_lines(listWithBlankLines)
-        self.assertListEqual(actual, expected, msg=Style.test_error_format(expected, actual))
+        self.assertListEqual(actual, expected, msg=comparable_test_result(expected, actual))
 
     def test_split_module_unit_description(self):
         expectedModuleDescription = [
@@ -133,9 +142,9 @@ class TestObjects(TestCase):
             ]
         ]
         actualModuleDescription, actualUnitDescriptions = self.module._split_module_unit_descriptions(self.modulePage)
-        self.assertListEqual(actualModuleDescription, expectedModuleDescription, msg=Style.print_with_metacharacters(expectedModuleDescription, actualModuleDescription))
-        self.assertListEqual(actualUnitDescriptions[0], expectedUnitDescriptions[0], msg=Style.print_with_metacharacters(expectedUnitDescriptions[0], actualUnitDescriptions[0]))
-        self.assertListEqual(actualUnitDescriptions[1], expectedUnitDescriptions[1], msg=Style.print_with_metacharacters(expectedUnitDescriptions[1], actualUnitDescriptions[1]))
+        self.assertListEqual(actualModuleDescription, expectedModuleDescription, msg=comparable_test_result(expectedModuleDescription, actualModuleDescription, printMetacharacters=True))
+        self.assertListEqual(actualUnitDescriptions[0], expectedUnitDescriptions[0], msg=comparable_test_result(expectedUnitDescriptions[0], actualUnitDescriptions[0], printMetacharacters=True))
+        self.assertListEqual(actualUnitDescriptions[1], expectedUnitDescriptions[1], msg=comparable_test_result(expectedUnitDescriptions[1], actualUnitDescriptions[1], printMetacharacters=True))
 
     def test_read_attributes_from_table(self):
         attributeTable = [
@@ -207,7 +216,8 @@ class TestObjects(TestCase):
                 "Tafelanschrieb, Laborübungen am Rechner"
         }
         actual = self.module._read_attributes_from_table(attributeTable)
-        self.assertDictEqual(actual, expected, msg=Style.print_with_metacharacters(expected, actual))
+        self.assertDictEqual(actual, expected, msg=comparable_test_result(expected, actual, printMetacharacters=True))
+
 
         # def test_read_attributes_from_table(self):
         #     expected = {

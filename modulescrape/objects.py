@@ -121,9 +121,6 @@ class Unit(Module):
         self.attributes = self._read_attributes_from_table(self.textTable)
 
     def __repr__( self ):
-        # lineFormat = "\t\t\t{:<30}\t-->\t{:<30}".format
-        # s = "\n".join([ lineFormat(k,v) for (k,v) in self.attributes.iteritems() ])
-        # return s
         return self.__str__()
 
     def __str__( self ):

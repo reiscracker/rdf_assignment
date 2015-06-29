@@ -58,4 +58,4 @@ def read_modules(handbuch_textfile_path):
     splittedModules = _split_modules(moduleHandbookText)
     modules = [ Module(modulePage=m) for m in splittedModules ]
     print("Read %s modules." % len(modules))
-    print(modules[1])
+    print(modules[-1])

@@ -36,7 +36,7 @@ class TwoColumnTableRegex():
         # If both columns contain values, we can just easily split the row using our pattern
         if not self.is_column_blank(line):
             matches = self.pattern.match(line).groups()
-            leftColumn, rightColumn = matches[0].strip(), matches[1].strip()
+            leftColumn, rightColumn = matches[0], matches[1]
 
         # If they are not, we need to determine which column has a value and which one doesn't. If the row starts
         # with a character instead of whitespace (pattern match is NOT None == it did match the string), we know that the
