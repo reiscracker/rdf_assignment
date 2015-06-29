@@ -1,4 +1,5 @@
 __author__ = 'reiscracker'
+# coding: utf-8
 import re
 
 class TwoColumnTableRegex():

@@ -1,12 +1,13 @@
 __author__ = 'reiscracker'
+# coding: utf-8
 from unittest import TestCase
 from modulescrape import scraper
 
 class TestScraper(TestCase):
 
     def setUp( self ):
-        super( ).setUp( )
-        with open('test_handbook.txt') as testFile:
+        super(TestScraper, self).setUp()
+        with open('handbook.txt') as testFile:
             self.testFileContent = testFile.readlines()
 
     def test_as_pairs(self):

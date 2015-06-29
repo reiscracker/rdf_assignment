@@ -1,4 +1,5 @@
 __author__ = 'reiscracker'
+# coding: utf-8
 import os
 from modulescrape.objects import Module
 
@@ -40,7 +41,6 @@ def _split_modules(module_handbook_text):
     print("Read %s modules" % len(modules))
     return modules
 
-
 def read_modules(handbuch_textfile_path):
     """
     Alright this might get messy, let's see
@@ -55,26 +55,7 @@ def read_modules(handbuch_textfile_path):
         moduleHandbookText = file.readlines()
 
     # Now split file (handbook) content into pages of separate module descriptions
-    splittedModulePages = _split_modules(moduleHandbookText)
-    leModule = Module(splittedModulePages[0])
-
-
-    # modules = []
-    # current_module = {}
-    # # Read until a new module starts
-    #
-    #
-    # # In the end there will be a list of separate module "pages" (which is a list of strings)
-    # splitted_modules = []
-    # new_module = []
-    #
-    # for line in file:
-    #     # Whenever there is "Modulname" in the text, a module page starts
-    #     if (line.startswith("Modulname")):
-    #         splitted_modules.append(new_module)
-    #         new_module = []
-    #     new_module.append(line)
-    # # Strip away the first one as this does not contain a module, but headers etc
-    # splitted_modules = splitted_modules[1:]
-    # print("Modules found: " + str(len(splitted_modules)))
-
+    splittedModules = _split_modules(moduleHandbookText)
+    modules = [ Module(modulePage=m) for m in splittedModules ]
+    print("Read %s modules." % len(modules))
+    print(modules[1])

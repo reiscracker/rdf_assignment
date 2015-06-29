@@ -2,12 +2,12 @@ __author__ = 'reiscracker'
 from unittest import TestCase
 
 from modulescrape.regexhelp import *
-
+# coding: utf-8
 
 class TestRegexHelper(TestCase):
 
     def setUp( self ):
-        super( ).setUp( )
+        super(TestRegexHelper, self).setUp()
         self.twoColumnRegex = TwoColumnTableRegex()
         self.error_format = "\nError:\n Expected: {}\n Actual: {}".format
 
@@ -46,4 +46,5 @@ class TestRegexHelper(TestCase):
         expected = { "left" : "", "right" : "" }
         actual = self.twoColumnRegex.get_columns(sampleRow)
         self.assertDictEqual(actual, expected, msg=self.error_format(expected, actual))
+
 
