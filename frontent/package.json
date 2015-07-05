@@ -1,0 +1,15 @@
+{
+  "name": "modulRDF",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/main.js",
+  "author": "cmeier",
+  "license": "ISC",
+
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-connect": "0.10.1",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-contrib-uglify": "~0.5.0"
+  }
+}

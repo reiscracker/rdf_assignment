@@ -1,0 +1,29 @@
+.form {
+    width: 800px;
+
+}
+.inputDiv {
+    width: 750px;
+}
+.labelTitle {
+    display: inline-block;
+    width: 250px;
+}
+.inputField {
+    width: 400px;
+}
+.spaceLeft {
+    margin-left: 4px;
+}
+.button {
+    background-color: darkgray;
+    border-radius: 5px;
+    width: 30px;
+    font-size: 0.9em;
+}
+.large {
+    width: 100px;
+}
+.delete {
+    visibility: hidden;
+}
