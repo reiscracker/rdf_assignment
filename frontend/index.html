@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eingabe neuer Modulbeschreibung</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<form id="form1" class="formStyle" action="form_action.asp">
+    <div class="inputDiv">
+        <label class="labelTitle" for="modulname">Modulname</label>
+        <input type="text" class="inputField" id="modulname"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="modulowner">Modulverantwortliche/r</label>
+        <input type="text" class="inputField" id="modulowner"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="dozent">Dozent/in</label>
+        <input type="text" class="inputField" id="dozent"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="semester">Semesterzugehörigkeit</label>
+        <input type="text" class="inputField" id="semester"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="duration">Dauer</label>
+        <input type="text" class="inputField" id="duration"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="status">Status des Moduls</label>
+        <input type="text" class="inputField" id="status"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="freq">Häufigkeit des Angebots</label>
+        <input type="text" class="inputField" id="freq"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="points">ECTS-Punkte</label>
+        <input type="text" class="inputField" id="points"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="workload">Gesamtworkload</label>
+        <input type="text" class="inputField" id="workload"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="sws">Präsenzzeit des Moduls in SWS</label>
+        <input type="text" class="inputField" id="sws"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="exam">Prüfungsform</label>
+        <input type="text" class="inputField" id="exam"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="evaluation">Prüfungsbewertung</label>
+        <input type="text" class="inputField" id="evaluation"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="niveau">Niveaustufe</label>
+        <input type="text" class="inputField" id="niveau"/>
+    </div>
+    <br>
+
+    <div id="containerExpertise" class="inputDiv">
+        <label class="labelTitle" for="expertise0">Lernergebnis</label>
+        <input type="text" class="inputField" id="expertise0"/>
+        <input type="button" class="button" value="+" onclick="addElement(this.parentNode)"/>
+        <input type="button" class="button delete" value="-" onclick="deleteElement(this.parentNode)"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="requirementNeed">Notwendige Voraussetzungen</label>
+        <input type="text" class="inputField" id="requirementNeed"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="requirementRec">Empfohlene Voraussetzungen</label>
+        <input type="text" class="inputField" id="requirementRec"/>
+    </div>
+    <br>
+
+    <div id ="containerUnits" class="inputDiv">
+        <label class="labelTitle" for="assignedUnits0">zugeordnete Units</label>
+        <input type="text" class="inputField" id="assignedUnits0"/>
+        <input type="button" class="button" value="+" onclick="addElement(this.parentNode)"/>
+        <input type="button" class="button delete" value="-" onclick="deleteElement(this.parentNode)"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="usability">Verwendbarkeit des Moduls</label>
+        <input type="text" class="inputField" id="usability"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="moduleRec">Anerkannte Module</label>
+        <input type="text" class="inputField" id="moduleRec"/>
+    </div>
+    <br>
+
+    <div class="inputDiv">
+        <label class="labelTitle" for="notice">Hinweise</label>
+        <input type="text" class="inputField" id="notice"/>
+    </div>
+    <br>
+
+    <input type="button" class="button large" value="Abschicken" onclick="submitForm(this.parentNode)"/>
+</form>
+</body>
+
+<script src="js/main.js"></script>
+<script src="js/form.js"></script>
+<script src="//localhost:35729/livereload.js"></script>
+
+</html>
