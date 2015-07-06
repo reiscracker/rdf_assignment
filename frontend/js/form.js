@@ -1,7 +1,18 @@
 var ausgabeArry = [['key','value']]
 var csvRows = [];
+var fileName = "";
 
 function submitForm(form) {
+    console.log(form.id);
+    if (form.id == "modulForm") {
+        fileName = "myModul.csv";
+    }
+    else if (form.id == "seminarForm") {
+        fileName = "mySeminar.csv";
+    }
+    else if (form.id == "exerciseForm") {
+        fileName = "myExercise.csv";
+    }
 
     var allDivs = form.getElementsByClassName("inputDiv");
 
@@ -38,7 +49,7 @@ function exportCSV() {
     var a = document.createElement('a');
     a.href = 'data:attachment/csv,' + csvString;
     a.target = '_blank';
-    a.download = 'myModul.csv';
+    a.download = fileName;
 
 
     document.body.appendChild(a);
@@ -127,6 +138,7 @@ function processData(csv) {
     }
 
     table.className = "formtable";
+    table.id = "previewTable";
     div.appendChild(table);
 }
 

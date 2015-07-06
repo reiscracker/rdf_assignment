@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eingabe neuer Seminarbeschreibung</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div class="content">
+    <h1 class="headline">Neue Übung</h1>
+    <form id="exerciseForm" class="form">
+        <div class="inputDiv">
+            <label class="labelTitle" for="seminarname">Name der Unit</label>
+            <input type="text" class="inputField" id="seminarname"/>
+        </div>
+        <br>
+
+        <div class="inputDiv">
+            <label class="labelTitle" for="assignedModul">Name des zugeordneten Moduls</label>
+            <input type="text" class="inputField" id="assignedModul"/>
+        </div>
+        <br>
+
+        <div class="inputDiv">
+            <label class="labelTitle" for="language">Sprache</label>
+            <input type="text" class="inputField" id="language"/>
+        </div>
+        <br>
+
+        <div class="inputDiv">
+            <label class="labelTitle" for="workload">Anteil Workload für die Unit</label>
+            <input type="text" class="inputField" id="workload"/>
+        </div>
+        <br>
+
+        <div class="inputDiv">
+            <label class="labelTitle" for="duration">Anteil der Präsenzzeit in SWS</label>
+            <input type="text" class="inputField" id="duration"/>
+        </div>
+        <br>
+
+        <div class="inputDiv">
+            <label class="labelTitle" for="learningForm">Lernform</label>
+            <input type="text" class="inputField" id="learningForm"/>
+        </div>
+        <br>
+
+        <div id="containerContent" class="inputDiv">
+            <label class="labelTitle" for="content0">Inhalte der Unit</label>
+            <input type="text" class="inputField" id="content0"/>
+            <input type="button" class="button" value="+" onclick="addElement(this.parentNode)"/>
+            <input type="button" class="button delete" value="-" onclick="deleteElement(this.parentNode)"/>
+        </div>
+        <br>
+
+        <div id="containerLiterature" class="inputDiv">
+            <label class="labelTitle" for="literature0">Literatur</label>
+            <input type="text" class="inputField" id="literature0"/>
+            <input type="button" class="button" value="+" onclick="addElement(this.parentNode)"/>
+            <input type="button" class="button delete" value="-" onclick="deleteElement(this.parentNode)"/>
+        </div>
+        <br>
+
+        <div class="inputDiv">
+            <label class="labelTitle" for="notice">Hinweise</label>
+            <input type="text" class="inputField" id="notice"/>
+        </div>
+        <br>
+
+        <input type="button" class="button large" value="Abschicken" onclick="submitForm(this.parentNode)"/>
+    </form>
+    <br><br><br>
+    <a class="link" href="index.html">
+        <div class="linkDivSmall">zurück</div>
+    </a>
+</div>
+</body>
+
+<script src="js/main.js"></script>
+<script src="js/form.js"></script>
+<script src="//localhost:35729/livereload.js"></script>
+
+</html>

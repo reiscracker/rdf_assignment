@@ -13,9 +13,13 @@ Prüfungsform#Modulprüfung: Klausur; Prüfungsvorleistungen: erfolgreich ab
 Prüfungsbewertung#differenziert nach Noten
 Niveaustufe#1a (voraussetzungsfreies Modul, in Bachelorstudiengängen)
 Lernergebnis#Verständnis formaler Sprachen und ihres Einsatzes in der Informatik
+Lernergebnis1#Kenntnis verschiedener Codierungen, Verständnis für Rechnerarithmetik
+Lernergebnis2#Fähigkeiten, theoretische Modelle in einem praktischen Kontext anzuwenden
+Lernergebnis3#Kenntnisse über theoretische und praktische Möglichkeiten und Grenzen der Informatik
 Notwendige Voraussetzungen#keine
 Empfohlene Voraussetzungen#keine
 zugeordnete Units#B11.1 Theoretische Grundlagen der Informatik (SL)
+zugeordnete Units1#B11.2 Theoretische Grundlagen der Informatik (Ü)
 Verwendbarkeit des Moduls#keine
 Anerkannte Module#keine
 Hinweise#Medienformen: Folien-Präsentationen über Beamer, Programmdemonstrationen, Tafelanschrieb

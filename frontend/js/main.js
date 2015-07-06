@@ -14,13 +14,22 @@ function addElement(container) {
         inputName = "assignedUnits";
         labelName = "zugeordnete Units";
     }
+    if (container.id == "containerContent") {
+        inputName = "content";
+        labelName = "Inhalte der Unit";
+    }
+    if (container.id == "containerLiterature") {
+        inputName = "literature";
+        labelName = "Literatur";
+    }
 
     input.type = "text";
-    input.className = "inputField spaceLeft";
+    input.className = "inputField";
     input.id = inputName + count;
+    input.style.marginLeft = "4px";
     label.htmlFor = input.id;
     label.className = "labelTitle";
-    label.innerHTML = labelName;
+    label.innerHTML = labelName + count;
     label.style.visibility = "hidden";
 
 

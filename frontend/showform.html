@@ -7,13 +7,42 @@
 </head>
 
 <body>
-    <input type="file" id="fileInput" class="file" onchange="loadFile(this.files)" accept="text/csv"/>
-    <br><br>
-    <div id="tableContainer" style="width: 800px">
+<div class="content">
+    <div class="infoContainer">
+        <div class="infoDiv">
+            <label class="infoHeader" for="fileInput">1. CSV auswählen</label>
+            <br><br>
+            <input type="file" id="fileInput" class="file" onchange="loadFile(this.files)" accept="text/csv"/>
+            <br>
+        </div>
+        <div class="infoDiv">
+            <span class="infoHeader">2. Vorschau</span>
+            <br><br>
+            <span>Daten werden als Tabellenvorschau angezeigt</span>
+        </div>
+        <div class="infoDiv">
+            <label class="infoHeader" for="tableContainer">3. PDF Export</label>
+            <br><br>
+            <input type="button" value="PDF Export" class="button large" onclick="pdfExport()">
+        </div>
+        <div style="clear: both"></div>
     </div>
+    <br>
+    <div class="noticeDiv"><span class="noticeSmall">Zur Information: Bitte nacheinander alle zu einem Modul zugehörigen CSV Datei laden<br>
+        Beispiel für Modul mit Seminar und Übung. Zuerst myModul laden, danach mySeminar und dann myExercise. Wenn alles stimmt, den Button "Export" drücken
+    </span></div>
+    <br><br>
 
+    <div id="tableContainer">
+    </div>
+    <br><br><br>
+    <a class="link" href="index.html">
+        <div class="linkDivSmall">zurück</div>
+    </a>
 
+</div>
 </body>
 <script src="js/form.js"></script>
+<script src="js/pdf.js"></script>
 <script src="//localhost:35729/livereload.js"></script>
 </html>
