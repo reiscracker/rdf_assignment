@@ -27,3 +27,21 @@
 .delete {
     visibility: hidden;
 }
+.formtable {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: 800px;
+    padding: 0;
+}
+.titleCol {
+    font-weight: bold;
+    width: 250px;
+    border: 1px solid black;
+}
+.dataCol {
+    border: 1px solid black;
+    width: 540px;
+}
+.row {
+}
