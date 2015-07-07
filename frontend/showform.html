@@ -10,9 +10,9 @@
 <div class="content">
     <div class="infoContainer">
         <div class="infoDiv">
-            <label class="infoHeader" for="fileInput">1. CSV auswählen</label>
+            <label class="infoHeader" for="fileInput">1. Dateien auswählen</label>
             <br><br>
-            <input type="file" id="fileInput" class="file" onchange="loadFile(this.files)" accept="text/csv"/>
+            <input type="file" id="fileInput" class="file" onchange="loadFile(this.files)" accept="text/csv" multiple/>
             <br>
         </div>
         <div class="infoDiv">
@@ -28,8 +28,8 @@
         <div style="clear: both"></div>
     </div>
     <br>
-    <div class="noticeDiv"><span class="noticeSmall">Zur Information: Bitte nacheinander alle zu einem Modul zugehörigen CSV Datei laden<br>
-        Beispiel für Modul mit Seminar und Übung. Zuerst myModul laden, danach mySeminar und dann myExercise. Wenn alles stimmt, den Button "Export" drücken
+    <div class="noticeDiv"><span class="noticeSmall">Zur Information: Es ist wichtig, dass das Modul alphabetisch als erstes kommt. <br>
+        Die richtige alphabetische Reihenfolge der zu ladenden Dateien ist 1. Modul, 2. Seminar, 3. Übung
     </span></div>
     <br><br>
 

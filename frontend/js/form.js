@@ -5,13 +5,13 @@ var fileName = "";
 function submitForm(form) {
     console.log(form.id);
     if (form.id == "modulForm") {
-        fileName = "myModul.csv";
+        fileName = "01Modul.csv";
     }
     else if (form.id == "seminarForm") {
-        fileName = "mySeminar.csv";
+        fileName = "02Seminar.csv";
     }
     else if (form.id == "exerciseForm") {
-        fileName = "myExercise.csv";
+        fileName = "03Exercise.csv";
     }
 
     var allDivs = form.getElementsByClassName("inputDiv");
@@ -58,7 +58,11 @@ function exportCSV() {
 
 function loadFile(files) {
     if (window.FileReader) {
-        readFile(files[0]);
+        //readFile(files[0]);
+        for (var i = 0; i < files.length; i++) {
+            console.log(files[i]);
+            readFile(files[i]);
+        }
     }
     else {
         alert("File API wird nicht unterstützt");
@@ -100,11 +104,15 @@ function processData(csv) {
         var notNUll = true;
 
         for (var j = 0; j < data.length; j++) {
-            console.log(data[j].length);
             if (j == 0) {
                 if (data[j].length > 0) {
-                    //Leerzeichen müssen wieder ersetzt werden, da es sonst zu fehlerhaften Anzeigen in der Tabelle kommt
-                    setCol(data[j].replace(/\u00A0/g," "), col1);
+                    //Prüfen ob Label eine Zahl enthält, falls ja wird Label nicht gesetzt
+                    //Somit werden zB bei multiplen Eingaben bei Lernergbnis oä nur einmal das Label angezeigt
+                    if (data[j].match(/\d+/g) == null) {
+                        //Leerzeichen müssen wieder ersetzt werden, da es sonst zu fehlerhaften Anzeigen in der Tabelle kommt
+                        setCol(data[j].replace(/\u00A0/g," "), col1);
+                    }
+
                 }
                 else {
                     notNUll = false;
@@ -143,7 +151,6 @@ function processData(csv) {
 }
 
 function setCol (data, col) {
-    console.log(data);
     var text = document.createTextNode(data);
     col.appendChild(text);
 }
