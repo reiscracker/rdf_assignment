@@ -1,0 +1,135 @@
+body {
+    margin-top: 0;
+}
+.content {
+    width: 900px;
+    background-color: #E6E6E6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 150px;
+}
+.form {
+    width: 800px;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.inputDiv {
+    width: 750px;
+}
+.labelTitle {
+    display: inline-block;
+    width: 250px;
+}
+.inputField {
+    width: 400px;
+}
+.button {
+    background-color: darkgray;
+    border-radius: 5px;
+    width: 30px;
+    font-size: 0.9em;
+}
+.large {
+    width: 100px;
+}
+.delete {
+    visibility: hidden;
+}
+.formtable {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: 800px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+.titleCol {
+    font-weight: bold;
+    width: 250px;
+    border: 1px solid black;
+}
+.dataCol {
+    border: 1px solid black;
+    width: 540px;
+}
+.row {
+}
+.headline {
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 3.0em;
+}
+.linkDiv {
+    background-color: lightgray;
+    color: black;
+    border-radius: 7px;
+    height: 40px;
+    width: 400px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.4em;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+}
+.linkDivSmall {
+    background-color: lightgray;
+    color: black;
+    border-radius: 7px;
+    height: 20px;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.9em;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 2px;
+}
+.linkDiv:hover, .linkDivSmall:hover {
+    box-shadow: inset 0 0 10px #585858;
+    -moz-box-shadow: inset 0 0 10px #585858;
+    -webkit-box-shadow: inset 0 0 10px #585858;
+    -o-box-shadow: inset 0 0 10px #585858;
+}
+.link {
+    text-decoration: none;
+}
+.infoContainer {
+    width: 770px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.infoDiv {
+    background-color: #D8D8D8;
+    border-radius: 4px;
+    margin-right: 5px;
+    width: 32.5%;
+    height: 90px;
+    float: left;
+    text-align: center;
+}
+.infoHeader {
+    font-size: 1.4em;
+    margin-top: 5px;
+}
+.noticeDiv {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #D8D8D8;
+    border-radius: 4px;
+    text-align: justify;
+    padding: 5px;
+}
+.noticeSmall {
+    font-size: 0.85em;
+    font-style: italic;
+}
