@@ -20,11 +20,12 @@
         a mo:Genre ;
         dc:title "Dark/Gothic Metal"
     ] ;
-    :lyrical_themes [
+    :lyrical_theme [
         a rdf:Bag;
         rdf:_1 "Love" ;
         rdf:_2 "Death" ;
         rdf:_3 "Emotions" ;
+        rdf:_4 "Satan"
     ] ;
     mo:fanpage <http://www.fotolog.net/aldrenliebe> ;
     mo:homepage <http://tramavirtual.uol.com.br/artista.jsp?id=30957> , <http://web.archive.org/web/*/http://www.aldrenliebe.net/> , 

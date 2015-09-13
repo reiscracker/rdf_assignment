@@ -5,6 +5,9 @@
 @prefix event: <http://purl.org/NET/c4dm/event.owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+
+@prefix : <http://www.example.org/> .
 
 <http://dbpedia.org/page/Slayer>
   a mo:MusicGroup;
@@ -21,3 +24,4 @@
                 [ a mo:Membership; mo:artist <#Jeff_Hanneman>; rdfs:label "past, guitar"; mo:primary_instrument: <http://dbpedia.org/page/Guitar>; tl:start "1981"^^xsd:gYear ; tl:end "2013"^^xsd:gYear ];
   mo:MusicalManifestation [a mo:MuscialManifestation; dc:title "Implode"; mo:producer <Slayer>; mo:release_type "Single"; tl:atYear "2014"^^xsd:gYear];
   rdfs:label "Versuch Nummer 1" .
+
