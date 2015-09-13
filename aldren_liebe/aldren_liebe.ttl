@@ -4,17 +4,31 @@
 @prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
 @prefix event: <http://purl.org/NET/c4dm/event.owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dbpedia: <http://dbpedia.org/resource/> .
 
-@prefix metalarchives: <http://www.metal-archives.com/#> .
+@prefix : <http://www.example.org/> .
 
 <http://www.metal-archives.com/bands/Aldren_Liebe/84201#band> 
     a               mo:MusicGroup ;
     foaf:name       "Aldren Liebe" ;
-    foaf:based_near dbpedia:Florianópolis ;
-    rdfs:comment    "Their EP is free for download on their homepage. Their single can be downloaded at Opus Nocturne (see links section)." ;
-    metalarchives:band_id "84201" ;
-    mo:activity_start "2004"^^xsd:year
+    mo:activity_start "2004"^^xsd:gYear ;
+    mo:origin       dbpedia:Florianópolis ;
+    rdfs:comment "Their EP is free for download on their homepage. Their single can be downloaded at Opus Nocturne (see links section)." ;
+    mo:genre    [
+        a mo:Genre ;
+        dc:title "Dark/Gothic Metal"
+    ] ;
+    :lyrical_themes [
+        a rdf:Bag;
+        rdf:_1 "Love" ;
+        rdf:_2 "Death" ;
+        rdf:_3 "Emotions" ;
+    ] ;
+    mo:fanpage <http://www.fotolog.net/aldrenliebe> ;
+    mo:homepage <http://tramavirtual.uol.com.br/artista.jsp?id=30957> , <http://web.archive.org/web/*/http://www.aldrenliebe.net/> , 
+        <http://www.myspace.com/aldrenliebe> , <http://aldrenliebe.palcomp3.cifraclub.terra.com.br/> .
+
         
 
