@@ -1,0 +1,23 @@
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://dbpedia.org/page/Slayer>
+  a mo:MusicGroup;
+  foaf:name "Slayer";
+  tl:start "1981"^^xsd:gYear;
+  mo:origin "United States";
+  event:place <http://sws.geonames.org/5358736/>;
+  mo:Genre <http://dbpedia.org/page/Thrash_metal>;
+  mo:Membership [ a mo:Membership; mo:artist <#Kerry_King>; rdfs:label "current, guitar"; mo:primary_instrument: <http://dbpedia.org/page/Guitar>; tl:start "1981"^^xsd:gYear ],
+                [ a mo:Membership; mo:artist <#Tom_Araya>; rdfs:label "current, vocal, bass"; mo:primary_instrument: <http://dbpedia.org/page/Bass_guitar>; tl:start "1982"^^xsd:gYear ],
+                [ a mo:Membership; mo:artist <#Paul_Bostaph>; rdfs:label "current, drums"; mo:primary_instrument: <http://dbpedia.org/page/Drum_kit>; tl:start "2013"^^xsd:gYear ],
+                [ a mo:Membership; mo:artist <#Jon_Dette>; rdfs:label "live, drums"; mo:primary_instrument: <http://dbpedia.org/page/Drum_kit>; tl:atYear "1996"^^xsd:gYear ; tl:atYear "2013"^^xsd:gYear ],
+                [ a mo:Membership; mo:artist <#Bob_Gourley>; rdfs:label "live, drums"; mo:primary_instrument: <http://dbpedia.org/page/Drum_kit>; tl:atYear "1983"^^xsd:gYear ],
+                [ a mo:Membership; mo:artist <#Jeff_Hanneman>; rdfs:label "past, guitar"; mo:primary_instrument: <http://dbpedia.org/page/Guitar>; tl:start "1981"^^xsd:gYear ; tl:end "2013"^^xsd:gYear ];
+  mo:MusicalManifestation [a mo:MuscialManifestation; dc:title "Implode"; mo:producer <Slayer>; mo:release_type "Single"; tl:atYear "2014"^^xsd:gYear];
+  rdfs:label "Versuch Nummer 1" .
