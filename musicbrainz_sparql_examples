@@ -1,0 +1,17 @@
+# Music ontology
+PREFIX mo: <http://purl.org/ontology/mo/>
+# FOAF (most basic stuff like names etc)
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+
+# Get bands with the name "Aldren Liebe"
+SELECT ?band WHERE {
+ ?band foaf:name "Aldren Liebe" .
+}
+
+# Get every information about the band
+# (like: "Aldren Liebe" "recorded" "BlaLied1")
+SELECT ?band ?p ?o WHERE {
+ ?band foaf:name "Aldren Liebe" .
+ ?band ?p ?o .
+}

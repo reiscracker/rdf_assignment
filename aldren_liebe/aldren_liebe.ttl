@@ -1,0 +1,20 @@
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+
+@prefix metalarchives: <http://www.metal-archives.com/#> .
+
+<http://www.metal-archives.com/bands/Aldren_Liebe/84201#band> 
+    a               mo:MusicGroup ;
+    foaf:name       "Aldren Liebe" ;
+    foaf:based_near dbpedia:Florianópolis ;
+    rdfs:comment    "Their EP is free for download on their homepage. Their single can be downloaded at Opus Nocturne (see links section)." ;
+    metalarchives:band_id "84201" ;
+    mo:activity_start "2004"^^xsd:year
+        
+
