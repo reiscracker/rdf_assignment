@@ -1,0 +1,22 @@
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+
+@prefix : <http://www.example.org/> .
+<http://www.metal-archives.com/bands/Slayer/72#band>
+    a mo:MusicGroup;
+    foaf:name "Slayer";
+    mo:activity_start "1981"^^xsd:gYear;
+    mo:origin dbpedia:United_States;
+    mo:genre [
+        a mo:Genre;
+        dc:title "Thrash Metal"
+    ];
+    :lyrical_theme "Satan", "Anti-Religion", "Murder", "War", "Politics";
+    :tabulatures_page <http://www.zonemetal.com/contenu-afficher-tabla-groupe-60.html>, <http://www.ultimate-guitar.com/tabs/slayer_tabs.htm>;
+    :merchandise_page <http://store.slayer.net/index.php/>, <http://www.rockmerch.com/Slayer-Merchandise_c_1000.html> .
