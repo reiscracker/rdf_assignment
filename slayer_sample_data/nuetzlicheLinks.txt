@@ -1,1 +1,5 @@
 http://www.easyrdf.org/converter
+http://musicbrainz.org/artist/bdacc37b-8633-4bf8-9dd5-4662ee651aec
+http://musicontology.com
+http://jsonviewer.stack.hu
+http://linkedbrainz.org/examples.html

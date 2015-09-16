@@ -1,0 +1,4 @@
+Jan
+- sparql einlesen
+- sparql musicbrainz infos holen zwecks verlinkung zu metal archive
+- frontend idee entwickeln
