@@ -1,0 +1,15 @@
+# Examples and Playground - sparql queries to musicbrainz via linkedBrainz http://linkedbrainz.org/sparql
+
+
+# Get the first 20 Bands
+
+PREFIX mo: <http://purl.org/ontology/mo/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?bandname
+WHERE {
+  ?band a mo:MusicGroup .
+  ?band foaf:name ?bandname .
+} ORDER BY ?bandname LIMIT 20
+
+#
